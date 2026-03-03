@@ -10,6 +10,7 @@ function adicionar() {
     let nomeTarefa = document.createElement('span')
 
     novaTarefa.classList.add('tarefa')
+    checkbox.classList.add('checkbox')
     checkbox.type = 'checkbox'
     nomeTarefa.innerText = inputTarefa.value
 

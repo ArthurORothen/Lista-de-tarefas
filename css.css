@@ -8,7 +8,10 @@
     font-weight: bold;
 }
 
-body{
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     background-color: black;
     overflow-x: hidden;
     margin: 0;
@@ -20,32 +23,52 @@ body{
 html {
     height: 100%;
 }
-main{
+
+main {
     display: flex;
     align-items: center;
     flex-direction: column;
+    gap: 20px;
 }
 
-h1{
+h1 {
     color: white;
 }
 
-label{
+label {
     color: white;
 }
 
-input{
+input {
+    width: 120px;
+    height: 24px;
     border-radius: 50px;
     text-align: center;
+    border: none;
 }
 
-.botoes{
+.checkbox{
+    width: 45px;
+    height: 15px;
+}
+
+.botoes {
     display: flex;
     flex-direction: row;
+    gap: 5px;
 }
 
-li{
+button {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    width: 150px;
+    height: 40px;
+    justify-content: space-around;
+    border: none;
+}
+
+li {
     color: white;
     list-style-type: decimal;
 }
-
