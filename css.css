@@ -12,12 +12,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: black;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    font-family: 'Lato';
+    background-image: url(/Lista\ de\ tarefas.svg);
 }
 
 html {
@@ -32,11 +31,11 @@ main {
 }
 
 h1 {
-    color: white;
+    color: black;
 }
 
 label {
-    color: white;
+    color: black;
 }
 
 input {
@@ -44,12 +43,17 @@ input {
     height: 24px;
     border-radius: 50px;
     text-align: center;
-    border: none;
+    border: solid;
+    border-color: black;
 }
 
 .checkbox{
     width: 45px;
     height: 15px;
+}
+
+.checkbox:checked + span{
+    text-decoration: line-through;
 }
 
 .botoes {
@@ -59,6 +63,8 @@ input {
 }
 
 button {
+    background-color: black;
+    color: white;
     display: flex;
     align-items: center;
     border-radius: 50px;
@@ -66,9 +72,15 @@ button {
     height: 40px;
     justify-content: space-around;
     border: none;
+    
+}
+
+button:hover{
+    cursor: pointer;
 }
 
 li {
-    color: white;
-    list-style-type: decimal;
+    color: black;
+    display: flex;
+    align-items: center;
 }
