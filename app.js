@@ -2,7 +2,7 @@ let btAdicionar = document.querySelector('#btAdicionar')
 let btRemover = document.querySelector('#btRemover')
 let inputTarefa = document.querySelector('#inputTarefa')
 let listaTarefas = document.querySelector('#listaTarefas')
-
+listaTarefas.classList.add('escondido')
 function adicionar() {
 
     if (inputTarefa.value == "") {
@@ -26,16 +26,21 @@ function adicionar() {
 
 
     inputTarefa.value = ''
+
+    listaTarefas.classList.remove('escondido')
 }
 
-function remover(){
-    
+function remover() {
+
     let tarefas = document.querySelectorAll('.tarefa')
 
     tarefas.forEach(tarefa => {
         let checkbox = tarefa.querySelector('input')
         if (checkbox.checked) {
-        tarefa.remove()
+            tarefa.remove()
+        }
+    if (listaTarefas.children.length == 0) {
+        listaTarefas.classList.add('escondido')
     }
     });
 }
